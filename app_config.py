@@ -25,7 +25,7 @@ PROJECT_FILENAME = 'lookatthis'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'lookatthis'
-REPOSITORY_URL = 'git@github.com:nprapps/%s.git' % REPOSITORY_NAME
+REPOSITORY_URL = 'git@github.com:jimlondon/%s.git' % REPOSITORY_NAME
 
 # Project name used for assets rig
 # Should stay the same, even if PROJECT_SLUG changes
@@ -37,18 +37,18 @@ POST_PATH = 'posts'
 DEPLOYMENT
 """
 PRODUCTION_S3_BUCKET = {
-    'bucket_name': 'apps.npr.org',
-    'region': 'us-east-1'
+    'bucket_name': 'apps.jameshouston.com',
+    'region': 's3-eu-west-1'
 }
 
 STAGING_S3_BUCKET = {
-    'bucket_name': 'stage-apps.npr.org',
-    'region': 'us-east-1'
+    'bucket_name': 'stage-apps.jameshouston.com',
+    'region': 's3-eu-west-1'
 }
 
 ASSETS_S3_BUCKET = {
-    'bucket_name': 'assets.apps.npr.org',
-    'region': 'us-east-1'
+    'bucket_name': 'assets.jameshouston.com',
+    'region': 's3-eu-west-1'
 }
 
 DEFAULT_MAX_AGE = 20
@@ -87,11 +87,11 @@ NPR_DFP = {
 SERVICES
 """
 TUMBLR_GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-5828686-63',
+    'ACCOUNT_ID': 'UA-xxxxxxx-xx',
 }
 
 PROJECT_GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-5828686-4',
+    'ACCOUNT_ID': 'UA-xxxxxxx-x',
     'DOMAIN': PRODUCTION_S3_BUCKET['bucket_name'],
     'TOPICS': '' # e.g. '[1014,3,1003,1002,1001]'
 }
@@ -100,7 +100,7 @@ VIZ_GOOGLE_ANALYTICS = {
     'ACCOUNT_ID': 'UA-5828686-75'
 }
 
-DISQUS_UUID = 'e90a2863-0148-11e4-93ac-14109fed4b76'
+DISQUS_UUID = 'e90a2863-0148-11e4-93ac-xxxxxxxxx'
 
 """
 OAUTH
@@ -166,28 +166,28 @@ def configure_targets(deployment_target):
         S3_BUCKET = PRODUCTION_S3_BUCKET
         S3_BASE_URL = 'http://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
         S3_DEPLOY_URL = 's3://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
-        DISQUS_SHORTNAME = 'npr-news'
+        DISQUS_SHORTNAME = 'jim-news'
         DEBUG = False
         TUMBLR_NAME = 'lookatthisstory'
     elif deployment_target == 'staging':
         S3_BUCKET = STAGING_S3_BUCKET
         S3_BASE_URL = 'http://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
         S3_DEPLOY_URL = 's3://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
-        DISQUS_SHORTNAME = 'nprviz-test'
+        DISQUS_SHORTNAME = 'jimviz-test'
         DEBUG = True
         TUMBLR_NAME = 'stage-lookatthis'
     elif deployment_target == 'development':
         S3_BUCKET = STAGING_S3_BUCKET
         S3_BASE_URL = 'http://127.0.0.1:8000'
         S3_DEPLOY_URL = None
-        DISQUS_SHORTNAME = 'nprviz-test'
+        DISQUS_SHORTNAME = 'jimviz-test'
         DEBUG = True
         TUMBLR_NAME = 'dev-lookatthis'
     else:
         S3_BUCKET = None
         S3_BASE_URL = 'http://127.0.0.1:8000'
         S3_DEPLOY_URL = None
-        DISQUS_SHORTNAME = 'nprviz-test'
+        DISQUS_SHORTNAME = 'jimviz-test'
         DEBUG = True
         APP_LOG_PATH = '/tmp/%s.app.log' % PROJECT_SLUG
         TUMBLR_NAME = 'dev-lookatthis'
