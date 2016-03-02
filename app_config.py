@@ -36,19 +36,30 @@ POST_PATH = 'posts'
 """
 DEPLOYMENT
 """
+
+# boto module doesn't like dots n the names for the irish buckets(!)
+# also had to create a boto helper file:
+# $ nano ~/.boto
+#   [s3]
+#   host=s3-eu-west-1.amazonaws.com
+# The official list of AWS endpoints is here:
+# http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region
+
+
+
 PRODUCTION_S3_BUCKET = {
-    'bucket_name': 'apps.jameshouston.com',
-    'region': 's3-eu-west-1'
+    'bucket_name': 'apps-jameshouston-com',
+    'region': 'eu-west-1'
 }
 
 STAGING_S3_BUCKET = {
-    'bucket_name': 'stage-apps.jameshouston.com',
-    'region': 's3-eu-west-1'
+    'bucket_name': 'stage-jameshouston-com',
+    'region': 'eu-west-1'
 }
 
 ASSETS_S3_BUCKET = {
-    'bucket_name': 'assets.jameshouston.com',
-    'region': 's3-eu-west-1'
+    'bucket_name': 'assets-jameshouston-com',
+    'region': 'eu-west-1'
 }
 
 DEFAULT_MAX_AGE = 20
@@ -64,7 +75,7 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '0AlXMOHKxzQVRdHZuX1UycXplRlBfLVB0UVNldHJYZmc'
+COPY_GOOGLE_DOC_KEY = '1OLTamxMDavAzZApdmeZIapxYczOe5k77GZRC7SAdFv4'
 COPY_ROOT = 'data'
 
 """
