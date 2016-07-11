@@ -5,12 +5,14 @@ var FILMSTRIP = (function() {
     var initFilmstrip = function($slide) {
         for (var i = 0; i < COPY.content.length; i++) {
             var rowAnchor = COPY.content[i]['id'];
-            var loopId = 'slide-' + rowAnchor;
+            var loopId = rowAnchor;
 
             var filmstripFolder = COPY.content[i]['filmstrip_folder']
             var filmstripLength = parseInt(COPY.content[i]['filmstrip_length']);
 
+
             if (loopId === $slide.attr('id') && filmstripFolder && filmstripLength) {
+                console.log(loopId, $slide.attr('id'), filmstripFolder, filmstripLength);
                 _loadImages(filmstripFolder, filmstripLength, $slide);
             }
         }
@@ -20,6 +22,9 @@ var FILMSTRIP = (function() {
         var imageSlug = 'assets/filmstrips/' + folder + '/' + folder;
         var $filmstripContainer = $slide.find('.filmstrip-container');
         var $frames = $filmstripContainer.find('.frame');
+
+        console.log($filmstripContainer);
+
 
         if ($frames.length !== length) {
             var remainingFrames = $frames.length + 1;
