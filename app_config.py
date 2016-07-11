@@ -24,7 +24,7 @@ PROJECT_SLUG = 'view'
 PROJECT_FILENAME = 'view'
 
 # The name of the repository containing the source
-REPOSITORY_NAME = 'view'
+REPOSITORY_NAME = 'lookatthis'
 REPOSITORY_URL = 'git@github.com:jimlondon/%s.git' % REPOSITORY_NAME
 
 # Project name used for assets rig
