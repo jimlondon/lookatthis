@@ -1,1 +1,0 @@
-COPY_GOOGLE_DOC_KEY = '0AsbgU6Ugtx7udGZwclVEbktmYTIyb2dZM3U3M0dWSXc&usp=drive_web'

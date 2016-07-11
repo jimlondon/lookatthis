@@ -18,18 +18,18 @@ NAMES
 """
 # Project name to be used in urls
 # Use dashes, not underscores!
-PROJECT_SLUG = 'lookatthis'
+PROJECT_SLUG = 'view'
 
 # Project name to be used in file paths
-PROJECT_FILENAME = 'lookatthis'
+PROJECT_FILENAME = 'view'
 
 # The name of the repository containing the source
-REPOSITORY_NAME = 'lookatthis'
+REPOSITORY_NAME = 'view'
 REPOSITORY_URL = 'git@github.com:jimlondon/%s.git' % REPOSITORY_NAME
 
 # Project name used for assets rig
 # Should stay the same, even if PROJECT_SLUG changes
-ASSETS_SLUG = 'lookatthis'
+ASSETS_SLUG = 'view'
 
 POST_PATH = 'posts'
 
@@ -48,7 +48,7 @@ DEPLOYMENT
 
 
 PRODUCTION_S3_BUCKET = {
-    'bucket_name': 'apps-jameshouston-com',
+    'bucket_name': 'go.jameshouston.com',
     'region': 'eu-west-1'
 }
 
@@ -102,13 +102,13 @@ TUMBLR_GOOGLE_ANALYTICS = {
 }
 
 PROJECT_GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-xxxxxxx-x',
+    'ACCOUNT_ID': 'UA-80550897-1',
     'DOMAIN': PRODUCTION_S3_BUCKET['bucket_name'],
     'TOPICS': '' # e.g. '[1014,3,1003,1002,1001]'
 }
 
 VIZ_GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-5828686-75'
+    'ACCOUNT_ID': 'UA-5828xxx-xx'
 }
 
 DISQUS_UUID = 'e90a2863-0148-11e4-93ac-xxxxxxxxx'

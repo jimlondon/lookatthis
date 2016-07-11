@@ -37,7 +37,7 @@ Changing environment requires a full-stack test.
 An environment points to both a server and an S3
 bucket.
 """
-env.post_root = 'lookatthis/posts'
+env.post_root = 'posts'
 
 @task
 def production():

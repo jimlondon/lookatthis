@@ -1,2 +1,0 @@
-COPY_GOOGLE_DOC_KEY = '0AiIfOsKv5mKldDVhakpwdXhUZGloUzZfV1VlRnVtWEE'
-DEPLOY_SLUG = 'plastic'

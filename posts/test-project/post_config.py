@@ -1,9 +1,0 @@
-COPY_GOOGLE_DOC_KEY = '0AqjLQISCZzBkdGdxRXdtVDNDMzIwNmN3S2RQd196NUE'
-DEPLOY_SLUG = 'test-project'
-NUM_SLIDES_AFTER_CONTENT = 2
-
-# Feature configuration
-AUDIO = True
-FILMSTRIP = True
-VIDEO = True
-PROGRESS_BAR = True

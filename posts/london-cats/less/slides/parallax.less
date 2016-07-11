@@ -1,0 +1,167 @@
+.parallax {
+    .full-block-cell {
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 2px #000;
+
+        .look-branding {
+            img {
+                max-width: 60px;
+                display: block;
+                margin: 0 auto;
+
+                @media @screen-small-above {
+                    max-width: 60px;
+                }
+                margin:0 5px;
+            }
+
+            h5 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 12px;
+                padding: 5px 0 5px 0;
+                border-bottom: 3px solid #bfde92;
+                display: inline-block;
+
+                @media @screen-small-above {
+                    font-size: 16px;
+                }
+            }
+        }
+
+         h1 {
+             font-size: 30px;
+             text-transform: uppercase;
+             font-weight: bold;
+             margin: 0;
+             @media @screen-small-above {
+                 font-size: 55px;
+                 text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+            }
+            @media @screen-large-above {
+                font-size: 85px;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            }
+            
+  
+            
+
+
+         }
+
+         h2 {
+            font-size: 13px;
+            font-family: georgia, serif;
+            font-weight: normal;
+            margin: 5px 0;
+
+            p:first-child {
+                margin: 20px 0;
+            }
+
+            @media @screen-small-above {
+                margin: 5px 0 30px 0;
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            font-size: 11px;
+            font-weight: bold;
+            margin: 0;
+            @media @screen-small-above {
+                font-size: 16px;
+            }
+        }
+
+        h4 {
+            font-size: 11px;
+            font-family: georgia, serif;
+            margin: 5px 0 0 0;
+            font-style: italic;
+            @media @screen-small-above {
+                font-size: 14px;
+                margin: 10px 0 0 0;
+            }
+        }
+
+        .btn.btn-go {
+            border-radius: 0;
+            background-color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 35px auto 0 auto;
+            text-align: center;
+             font-size: 18px;
+            padding: 0 22px;
+            line-height: 44px;
+
+
+            &:hover {
+                .no-touch & {
+                    background-color: #000;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .gradefill {
+
+            padding:0 22px;
+            margin:0;
+            
+
+            
+
+
+
+            .no-touch & {
+                
+                position:relative;
+                float:left;     
+
+                & span {
+                    color:#000;
+                    display:block; 
+                    position:absolute; 
+                    left:0; 
+                    bottom:0; 
+                    width:100%; 
+                    height:0; 
+                    margin:0 22px;
+                    overflow:hidden;
+                    -webkit-transition:0.3s;
+                    -o-transition:0.3s;
+                    transition:0.3s;
+                    transition-timing-function: cubic-bezier(0,0.8,0.9,1);
+                    -webkit-transition-timing-function: cubic-bezier(0,0.8,0.9,1);
+                    text-align:center;
+                    
+
+                    &:before {
+                        content:attr(rel);
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        color:#00a8ff;
+                        text-align: center;
+                    }
+
+
+                }
+
+                &:hover  {
+                    color:#fff;
+
+                    & span {
+                        //height:47.5%;
+                        height:47.5%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,2 +1,0 @@
-COPY_GOOGLE_DOC_KEY = 'AiIfOsKv5mKldENIdE5LRXZkZmxiR2dqckMyNVcyT2c'
-DEPLOY_SLUG = 'niemann-loves'

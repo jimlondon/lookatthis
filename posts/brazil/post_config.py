@@ -1,9 +1,0 @@
-COPY_GOOGLE_DOC_KEY = '1BmhlbCaQnH3UkLt7nOy7hgGQ0QngvgOka3Jl92ZaPjY'
-DEPLOY_SLUG = 'brazil'
-NUM_SLIDES_AFTER_CONTENT = 1
-
-# Configuration
-AUDIO = False
-VIDEO = False
-FILMSTRIP = False
-PROGRESS_BAR = True

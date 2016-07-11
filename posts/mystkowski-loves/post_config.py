@@ -1,2 +1,0 @@
-COPY_GOOGLE_DOC_KEY = '0AiIfOsKv5mKldEhXSGpUbzltd1NkZ2lYVnVKZHpQcVE'
-DEPLOY_SLUG = 'mystkowski-loves'
