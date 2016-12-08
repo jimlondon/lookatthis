@@ -1,4 +1,4 @@
-.start {
+.parallax {
     .full-block-cell {
         text-align: center;
         color: #fff;
@@ -6,13 +6,14 @@
 
         .look-branding {
             img {
-                max-width: 80px;
+                max-width: 60px;
                 display: block;
                 margin: 0 auto;
 
                 @media @screen-small-above {
-                    max-width: 80px;
+                    max-width: 60px;
                 }
+                margin:0 5px;
             }
 
             h5 {
@@ -36,10 +37,17 @@
              margin: 0;
              @media @screen-small-above {
                  font-size: 55px;
+                 text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
             }
             @media @screen-large-above {
                 font-size: 85px;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
             }
+            
+  
+            
+
+
          }
 
          h2 {
@@ -90,8 +98,70 @@
             line-height: 44px;
 
 
+            &:hover {
+                .no-touch & {
+                    background-color: #000;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .gradefill {
+
+            padding:0 22px;
+            margin:0;
             
 
+            
+
+
+
+            .no-touch & {
+                
+                position:relative;
+                float:left;     
+
+                & span {
+                    color:#000;
+                    display:block; 
+                    position:absolute; 
+                    left:0; 
+                    bottom:0; 
+                    width:100%; 
+                    height:0; 
+                    margin:0 22px;
+                    overflow:hidden;
+                    -webkit-transition:0.3s;
+                    -o-transition:0.3s;
+                    transition:0.3s;
+                    transition-timing-function: cubic-bezier(0,0.8,0.9,1);
+                    -webkit-transition-timing-function: cubic-bezier(0,0.8,0.9,1);
+                    text-align:center;
+                    
+
+                    &:before {
+                        content:attr(rel);
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        color:#00a8ff;
+                        text-align: center;
+                    }
+
+
+                }
+
+                &:hover  {
+                    color:#fff;
+
+                    & span {
+                        //height:47.5%;
+                        height:47.5%;
+                    }
+                }
+            }
         }
     }
 }
